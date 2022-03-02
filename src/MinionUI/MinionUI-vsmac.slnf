@@ -1,0 +1,17 @@
+{
+  "solution": {
+    "path": "MinionUI.sln",
+    "projects": [
+		"MinionUI.Shared\\MinionUI.Shared.shproj",
+
+
+
+
+
+
+		"MinionUI.Skia.Gtk\\MinionUI.Skia.Gtk.csproj",
+
+		"MinionUI.Skia.Linux.FrameBuffer\\MinionUI.Skia.Linux.FrameBuffer.csproj",
+    ]
+  }
+}
