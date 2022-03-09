@@ -6,9 +6,39 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Width="800"
+    Height="600">
 
-    <Grid>
-      <TextBlock Text="Hello, world!" Margin="20" FontSize="30" />
+    <Grid HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch"
+          Margin="25,25,25,25" >
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <Button x:Name="ExistingVmsButton"
+              Grid.Row="0"
+              Grid.Column="0"
+              Content="Existing VMs"
+              VerticalAlignment="Stretch"
+              HorizontalAlignment="Stretch" />
+      <Button x:Name="CreateTemplateButton"
+              Grid.Row="0"
+              Grid.Column="1"
+              Content="Create Template"
+              VerticalAlignment="Stretch"
+              HorizontalAlignment="Stretch" />
+      <Button x:Name="CreateVmButton"
+              Grid.Row="0"
+              Grid.Column="2"
+              Content="Create VM"
+              VerticalAlignment="Stretch"
+              HorizontalAlignment="Stretch" />
     </Grid>
 </Page>
