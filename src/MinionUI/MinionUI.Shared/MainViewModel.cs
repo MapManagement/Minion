@@ -7,6 +7,12 @@ namespace MinionUI
 
         }
 
+        #region Methods
+
+        
+
+        #endregion
+
         
     }
 }

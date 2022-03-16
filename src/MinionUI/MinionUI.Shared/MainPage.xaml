@@ -33,7 +33,7 @@
               Grid.Column="1"
               Content="Create Template"
               VerticalAlignment="Stretch"
-              HorizontalAlignment="Stretch" />
+              HorizontalAlignment="Stretch"/>
       <Button x:Name="CreateVmButton"
               Grid.Row="0"
               Grid.Column="2"

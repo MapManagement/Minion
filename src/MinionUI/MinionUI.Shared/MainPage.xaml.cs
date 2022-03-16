@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using MinionUI.CreateGuest;
+using MinionUI.CreateTemplate;
+using MinionUI.ExistingGuests;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -29,11 +32,44 @@ namespace MinionUI
 
             _mainVm = new MainViewModel();
             DataContext = _mainVm;
+
+            SubscribeButtonEvents();
         }
 
         #region Properties
 
 
+
+        #endregion
+
+        #region Methods
+
+        private void SubscribeButtonEvents()
+        {
+            ExistingVmsButton.Click += ExistingVmsButtonOnClick;
+            CreateVmButton.Click += CreateVmButtonOnClick;
+            CreateTemplateButton.Click += CreateTemplateButtonOnClick;
+            
+        }
+
+        #endregion
+
+        #region Events
+
+        private void ExistingVmsButtonOnClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ExistingGuestsPage));
+        }
+
+        private void CreateVmButtonOnClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CreateGuestPage));
+        }
+
+        private void CreateTemplateButtonOnClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CreateTemplatePage));
+        }
 
         #endregion
     }
