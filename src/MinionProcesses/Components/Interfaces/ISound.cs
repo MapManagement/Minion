@@ -1,6 +1,6 @@
 namespace MinionProcesses.Components.Interfaces
 {
-    interface ISound
+    public interface ISound
     {
 
     }

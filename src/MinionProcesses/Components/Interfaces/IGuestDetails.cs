@@ -2,7 +2,7 @@ using MinionProcesses.Components.Enums;
 
 namespace MinionProcesses.Components.Interfaces
 {
-    interface IGuestDetails
+    public interface IGuestDetails
     {
         GuestHypervisor Hypervisor { get; set; }
 

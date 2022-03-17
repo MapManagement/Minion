@@ -1,6 +1,6 @@
 namespace MinionProcesses.Components.Enums
 {
-    enum StorageType
+    public enum StorageType
     {
         Disk,
         CdRom,
@@ -8,7 +8,7 @@ namespace MinionProcesses.Components.Enums
         LunPassthrough
     }
 
-    enum StorageBusType
+    public enum StorageBusType
     {
         Sata,
         VirtIo,

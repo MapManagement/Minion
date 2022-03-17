@@ -1,11 +1,11 @@
 namespace MinionProcesses.Components.Enums
 {
-    enum NetworkInterfaceType
+    public enum NetworkInterfaceType
     {
         Bridge,
     }
 
-    enum NetworkDeviceModel
+    public enum NetworkDeviceModel
     {
         Virtio,
         HypervisorDefault,

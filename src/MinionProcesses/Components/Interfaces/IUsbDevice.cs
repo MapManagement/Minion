@@ -1,6 +1,6 @@
 namespace MinionProcesses.Components.Interfaces
 {
-    interface IUsbDevice
+    public interface IUsbDevice
     {
         string VendorId { get; set; }
 

@@ -1,6 +1,6 @@
 namespace MinionProcesses.Components.Enums
 {
-    enum CpuConfiguration
+    public enum CpuConfiguration
     {
 
     }

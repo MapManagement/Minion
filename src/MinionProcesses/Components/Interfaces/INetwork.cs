@@ -2,7 +2,7 @@ using MinionProcesses.Components.Enums;
 
 namespace MinionProcesses.Components.Interfaces
 {
-    interface INetwork
+    public interface INetwork
     {
         NetworkInterfaceType InterfaceType { get; set; }
 

@@ -1,6 +1,6 @@
 namespace MinionProcesses.Components.Interfaces
 {
-    interface IPciDevice
+    public interface IPciDevice
     {
         string Driver { get; set; }
 

@@ -1,6 +1,6 @@
 namespace MinionProcesses.Components.Interfaces
 {
-    interface IMemory
+    public interface IMemory
     {
         int Allocation { get; set; }
 

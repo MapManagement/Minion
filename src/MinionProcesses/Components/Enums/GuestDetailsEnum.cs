@@ -1,16 +1,16 @@
 namespace MinionProcesses.Components.Enums
 {
-    enum GuestHypervisor
+    public enum GuestHypervisor
     {
 
     }
 
-    enum GuestArchitecture
+    public enum GuestArchitecture
     {
 
     }
 
-    enum GuestChipset
+    public enum GuestChipset
     {
 
     }
