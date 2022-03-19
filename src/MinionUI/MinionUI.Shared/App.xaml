@@ -7,8 +7,18 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
-                <!-- Place resources here -->
+                <!-- Load WinUI resources -->
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"
+                                       OverrideSource="ms-appx:///ColorPaletteOverride.xaml" />
+
+                <!-- Load Material Color Palette -->
+                <MaterialColors xmlns="using:Uno.Material" />
+
+                <!-- Load the Material control resources -->
+                <MaterialResources xmlns="using:Uno.Material" />
+
+                <!-- Application's custom styles -->
+                <!-- other ResourceDictionaries -->
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

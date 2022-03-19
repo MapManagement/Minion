@@ -27,18 +27,21 @@
               Grid.Column="0"
               Content="Existing VMs"
               VerticalAlignment="Stretch"
-              HorizontalAlignment="Stretch" />
+              HorizontalAlignment="Stretch"
+              Style="{StaticResource MaterialOutlinedButtonStyle}" />
       <Button x:Name="CreateTemplateButton"
               Grid.Row="0"
               Grid.Column="1"
               Content="Create Template"
               VerticalAlignment="Stretch"
-              HorizontalAlignment="Stretch"/>
+              HorizontalAlignment="Stretch"
+              Style="{StaticResource MaterialOutlinedButtonStyle}"/>
       <Button x:Name="CreateVmButton"
               Grid.Row="0"
               Grid.Column="2"
               Content="Create VM"
               VerticalAlignment="Stretch"
-              HorizontalAlignment="Stretch" />
+              HorizontalAlignment="Stretch"
+              Style="{StaticResource MaterialOutlinedButtonStyle}" />
     </Grid>
 </Page>

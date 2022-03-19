@@ -33,6 +33,8 @@ namespace MinionUI
         {
             InitializeLogging();
 
+            Uno.UI.ApplicationHelper.RequestedCustomTheme = "Dark";
+
             this.InitializeComponent();
 
 #if HAS_UNO || NETFX_CORE
