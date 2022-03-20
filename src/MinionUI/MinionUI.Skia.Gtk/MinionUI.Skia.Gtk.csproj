@@ -15,14 +15,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="5.0.0" />
+    <PackageReference Include="MinionProcesses" Version="0.0.1" />
     <PackageReference Include="Uno.UI.Skia.Gtk" Version="4.1.8" />
     <PackageReference Include="Uno.UI.RemoteControl" Version="4.1.8" Condition="'$(Configuration)'=='Debug'" />
     <PackageReference Include="Uno.UI.Adapter.Microsoft.Extensions.Logging" Version="4.1.8" />
     <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI.Controls.DataGrid" Version="7.1.11" />
     <PackageReference Include="Uno.Material" Version="1.3.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="../../MinionProcesses/MinionProcesses.csproj" />
   </ItemGroup>
   <Import Project="..\MinionUI.Shared\MinionUI.Shared.projitems" Label="Shared" />
 </Project>

@@ -24,7 +24,16 @@ namespace MinionUI
 
         private MainViewModel _mainVm;
 
+        private readonly List<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)>
+        {
+            ("guest", typeof(CreateGuestPage)),
+            ("template", typeof(CreateTemplatePage)),
+            ("overview", typeof(ExistingGuestsPage)),
+        };
+
         #endregion
+
+        #region Constructor
 
         public MainPage()
         {
@@ -32,9 +41,9 @@ namespace MinionUI
 
             _mainVm = new MainViewModel();
             DataContext = _mainVm;
-
-            SubscribeButtonEvents();
         }
+
+        #endregion
 
         #region Properties
 
@@ -44,31 +53,47 @@ namespace MinionUI
 
         #region Methods
 
-        private void SubscribeButtonEvents()
+        private void Navigate(string navItemTag, Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo transitionInfo)
         {
-            ExistingVmsButton.Click += ExistingVmsButtonOnClick;
-            CreateVmButton.Click += CreateVmButtonOnClick;
-            CreateTemplateButton.Click += CreateTemplateButtonOnClick;
-            
+            Type _page = null;
+            if (navItemTag == "settings")
+            {
+                return; //TODO: add settings page
+            }
+            else
+            {
+                var item = _pages.FirstOrDefault(p => p.Tag.Equals(navItemTag));
+                _page = item.Page;
+            }
+
+            var preNavPageType = ContentFrame.CurrentSourcePageType;
+
+            if (!(_page is null) && !Type.Equals(preNavPageType, _page))
+            {
+                ContentFrame.Navigate(_page, null, transitionInfo);
+            }
         }
 
         #endregion
 
         #region Events
 
-        private void ExistingVmsButtonOnClick(object sender, RoutedEventArgs e)
+        private void PageNavigation_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
-            this.Frame.Navigate(typeof(ExistingGuestsPage));
+            if (args.IsSettingsInvoked == true)
+            {
+                Navigate("settings", args.RecommendedNavigationTransitionInfo);
+            }
+            else if (args.InvokedItemContainer != null)
+            {
+                var navItemTag = args.InvokedItemContainer.Tag.ToString();
+                Navigate(navItemTag, args.RecommendedNavigationTransitionInfo);
+            }
         }
 
-        private void CreateVmButtonOnClick(object sender, RoutedEventArgs e)
+        private void PageNavigation_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
         {
-            this.Frame.Navigate(typeof(CreateGuestPage));
-        }
-
-        private void CreateTemplateButtonOnClick(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(CreateTemplatePage));
+            return; //TODO: implement back
         }
 
         #endregion

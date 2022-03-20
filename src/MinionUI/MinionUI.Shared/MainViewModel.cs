@@ -1,3 +1,7 @@
+using System.Collections.Generic;
+using MinionProcesses.Components;
+using MinionProcesses.Components.Interfaces;
+
 namespace MinionUI
 {
     public class MainViewModel
@@ -6,6 +10,11 @@ namespace MinionUI
         {
 
         }
+
+        #region Properties
+
+
+        #endregion
 
         #region Methods
 

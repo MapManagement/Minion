@@ -7,17 +7,20 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-    Width="800"
-    Height="600">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <controls:DataGrid x:Name="GuestDataGrid"
-                       ItemsSource="{x:Bind _mainVm.GuestList}">
+                       ItemsSource="{x:Bind _mainVm.Guests}"
+                       AutoGenerateColumns="False">
         <controls:DataGrid.Columns>
-            <controls:DataGridTextColumn Header="Name" />
-            <controls:DataGridTextColumn Header="Template" />
-            <controls:DataGridTextColumn Header="Created at" />
-            <controls:DataGridTextColumn Header="Last updated at" />
+            <controls:DataGridTextColumn Header="Name"
+                                         Binding="{Binding Name}"/>
+            <controls:DataGridTextColumn Header="Template"
+                                         Binding="{Binding Template}" />
+            <controls:DataGridTextColumn Header="Created at"
+                                         Binding="{Binding CreatedAt}" />
+            <controls:DataGridTextColumn Header="Last updated at"
+                                         Binding="{Binding LastUpdatedAt}" />
         </controls:DataGrid.Columns>
     </controls:DataGrid>
 
