@@ -6,11 +6,11 @@ namespace MinionProcesses.Components.Interfaces
     {
         NetworkInterfaceType InterfaceType { get; set; }
 
-        string InterfaceName { get; set; }
+        string? InterfaceName { get; set; }
 
-        string SourceName { get; set; }
+        string? SourceName { get; set; }
 
-        string MacAddress { get; set; }
+        string? MacAddress { get; set; }
 
         NetworkDeviceModel DeviceModel { get; set; }
 

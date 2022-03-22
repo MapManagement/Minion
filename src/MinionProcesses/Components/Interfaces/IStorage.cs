@@ -4,7 +4,7 @@ namespace MinionProcesses.Components.Interfaces
 {
     public interface IStorage
     {
-        string Path { get; set; }
+        string? Path { get; set; }
 
         StorageType Type { get; set; }
 
