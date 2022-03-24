@@ -2,13 +2,70 @@
     x:Class="MinionUI.CreateTemplate.CreateTemplatePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     xmlns:local="using:MinionUI"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-    Width="800"
-    Height="600">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="CreateTemplateMainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+
+        <NavigationView x:Name="TemplateNavigation"
+                        PaneDisplayMode="Left"
+                        IsSettingsVisible="False"
+                        IsPaneOpen="True"
+                        IsBackEnabled="False"
+                        IsBackButtonVisible="Collapsed"
+                        IsPaneToggleButtonVisible="False">
+                <NavigationView.MenuItems>
+                        <NavigationViewItem x:Name="GeneralNavItem"
+                                            Content="General"
+                                            Tag="template"
+                                            Height="80" />
+                        <NavigationViewItem x:Name="CpuNavItem"
+                                            Content="CPU"
+                                            Tag="template"
+                                            Height="80" />
+                        <NavigationViewItem x:Name="MemoryNavItem"
+                                            Content="Memory"
+                                            Tag="template"
+                                            Height="80" />
+                        <NavigationViewItem x:Name="StorageNavItem"
+                                            Content="Storage"
+                                            Tag="template"
+                                            Height="80" />
+                        <NavigationViewItem x:Name="NetworkNavItem"
+                                            Content="Network"
+                                            Tag="template"
+                                            Height="80" />                                            
+                        <NavigationViewItem x:Name="SoundNavItem"
+                                            Content="Sound"
+                                            Tag="template"
+                                            Height="80" />
+                        <NavigationViewItem x:Name="UsbDevicesNavItem"
+                                            Content="USB Devices"
+                                            Tag="template"
+                                            Height="80"/>   
+                        <NavigationViewItem x:Name="PciDevicesNavItem"
+                                            Content="PCI Devices"
+                                            Tag="template"
+                                            Height="80" />               
+                </NavigationView.MenuItems>
+
+        </NavigationView>
+
+        <Grid x:Name="TemplateDetails"
+              Grid.Column="1"
+              Margin="10,40,10,20">
+              <TextBlock x:Name="Test"
+              Text="Hello World"/>
+        </Grid>
+    </Grid>
 
     
 </Page>

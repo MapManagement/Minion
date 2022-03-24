@@ -10,7 +10,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid>
         <NavigationView x:Name="PageNavigation"
-                        PaneDisplayMode="LeftCompact"
+                        PaneDisplayMode="Top"
                         ItemInvoked="PageNavigation_ItemInvoked"
                         BackRequested="PageNavigation_BackRequested">
                 <NavigationView.MenuItems>
@@ -28,7 +28,12 @@
                                             Icon="AddFriend" />                   
                 </NavigationView.MenuItems>
 
-                <Frame x:Name="ContentFrame" />
+                <Frame x:Name="ContentFrame"
+                       Width="Auto"
+                       Height="Auto"
+                       HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch"
+                       Margin="25,25,25,25" />
         </NavigationView>
     </Grid>
 </Page>

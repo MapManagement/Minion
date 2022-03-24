@@ -11,20 +11,23 @@
 
     <controls:DataGrid x:Name="GuestDataGrid"
                        ItemsSource="{x:Bind _mainVm.Guests}"
-                       AutoGenerateColumns="False">
+                       AutoGenerateColumns="False"
+                       CanUserReorderColumns="True"
+                       CanUserResizeColumns="True"
+                       GridLinesVisibility="All">
         <controls:DataGrid.Columns>
             <controls:DataGridTextColumn Header="Name"
                                          Binding="{Binding Name}"
-                                         Width="Auto"/>
+                                         Width="SizeToHeader"/>
             <controls:DataGridTextColumn Header="Template"
                                          Binding="{Binding Template}"
-                                         Width="Auto" />
+                                         Width="SizeToHeader" />
             <controls:DataGridTextColumn Header="Created at"
                                          Binding="{Binding CreatedAt}"
-                                         Width="Auto" />
+                                         Width="SizeToHeader" />
             <controls:DataGridTextColumn Header="Last updated at"
                                          Binding="{Binding LastUpdatedAt}"
-                                         Width="Auto" />
+                                         Width="SizeToHeader" />
         </controls:DataGrid.Columns>
     </controls:DataGrid>
 
