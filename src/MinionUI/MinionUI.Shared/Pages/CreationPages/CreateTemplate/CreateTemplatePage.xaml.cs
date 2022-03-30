@@ -13,21 +13,21 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace MinionUI.CreateTemplateAdvanced
+namespace MinionUI.CreationPages.CreateTemplate
 {
-    public sealed partial class CreateTemplateAdvancedPage : Page
+    public sealed partial class CreateTemplatePage : Page
     {
         #region Fields
 
-        private CreateTemplateAdvancedViewModel _mainVm;
+        private CreateTemplateViewModel _mainVm;
 
         #endregion
 
-        public CreateTemplateAdvancedPage()
+        public CreateTemplatePage()
         {
             this.InitializeComponent();
 
-            _mainVm = new CreateTemplateAdvancedViewModel();
+            _mainVm = new CreateTemplateViewModel();
             DataContext = _mainVm;
         }
 

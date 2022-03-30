@@ -1,4 +1,4 @@
-namespace MinionUI.CreateGuest
+namespace MinionUI.CreationPages.CreateGuest
 {
     public class CreateGuestVieModel
     {
