@@ -10,62 +10,55 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="CreateTemplateMainGrid">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="4*" />
-        </Grid.ColumnDefinitions>
-
         <NavigationView x:Name="TemplateNavigation"
                         PaneDisplayMode="Left"
                         IsSettingsVisible="False"
                         IsPaneOpen="True"
                         IsBackEnabled="False"
                         IsBackButtonVisible="Collapsed"
-                        IsPaneToggleButtonVisible="False">
+                        IsPaneToggleButtonVisible="False"
+                        ItemInvoked="PageNavigation_ItemInvoked">
                 <NavigationView.MenuItems>
                         <NavigationViewItem x:Name="GeneralNavItem"
                                             Content="General"
-                                            Tag="template"
+                                            Tag="general"
                                             Height="80" />
                         <NavigationViewItem x:Name="CpuNavItem"
                                             Content="CPU"
-                                            Tag="template"
+                                            Tag="cpu"
                                             Height="80" />
                         <NavigationViewItem x:Name="MemoryNavItem"
                                             Content="Memory"
-                                            Tag="template"
+                                            Tag="memory"
                                             Height="80" />
                         <NavigationViewItem x:Name="StorageNavItem"
                                             Content="Storage"
-                                            Tag="template"
+                                            Tag="storage"
                                             Height="80" />
                         <NavigationViewItem x:Name="NetworkNavItem"
                                             Content="Network"
-                                            Tag="template"
+                                            Tag="network"
                                             Height="80" />                                            
                         <NavigationViewItem x:Name="SoundNavItem"
                                             Content="Sound"
-                                            Tag="template"
+                                            Tag="sound"
                                             Height="80" />
                         <NavigationViewItem x:Name="UsbDevicesNavItem"
                                             Content="USB Devices"
-                                            Tag="template"
+                                            Tag="usb-devices"
                                             Height="80"/>   
                         <NavigationViewItem x:Name="PciDevicesNavItem"
                                             Content="PCI Devices"
-                                            Tag="template"
+                                            Tag="pci-devices"
                                             Height="80" />               
                 </NavigationView.MenuItems>
 
+            <Frame x:Name="ContentFrame"
+                       Width="Auto"
+                       Height="Auto"
+                       HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch"
+                       Margin="25,25,25,25" />
         </NavigationView>
-
-        <Grid x:Name="TemplateDetails"
-              Grid.Column="1"
-              Margin="10,40,10,20">
-              <TextBlock x:Name="Test"
-              Text="Hello World"/>
-        </Grid>
     </Grid>
-
-    
 </Page>
