@@ -23,13 +23,9 @@
                                             Content="General"
                                             Tag="general"
                                             Height="80" />
-                        <NavigationViewItem x:Name="CpuNavItem"
-                                            Content="CPU"
-                                            Tag="cpu"
-                                            Height="80" />
-                        <NavigationViewItem x:Name="MemoryNavItem"
-                                            Content="Memory"
-                                            Tag="memory"
+                        <NavigationViewItem x:Name="CpuMemoryNavItem"
+                                            Content="CPU-Memory"
+                                            Tag="cpu-memory"
                                             Height="80" />
                         <NavigationViewItem x:Name="StorageNavItem"
                                             Content="Storage"
