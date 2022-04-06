@@ -3,15 +3,11 @@ using System.Collections.Generic;
 
 namespace MinionProcesses.Components.Interfaces
 {
-    public interface IGuest
+    public interface ITemplate
     {
         #region Properties
 
         string Name { get; set; }
-
-        string? Template { get; set; }
-
-        string Uuid { get; set; }
 
         string? Description { get; set; }
 
@@ -34,22 +30,6 @@ namespace MinionProcesses.Components.Interfaces
         List<IUsbDevice>? UsbDevices { get; set; }
 
         DateTime CreatedAt { get; set; }
-
-        DateTime? LastUsedAt { get; set; }
-
-        #endregion
-
-        #region Methods
-
-        void Create();
-
-        void Delete(bool deleteStorage);
-
-        void Clone(bool cloneStorage);
-
-        void Start();
-
-        void Stop();
 
         #endregion
 

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageId>MinionProcesses</PackageId>
-    <Version>0.0.1</Version>
+    <Version>0.0.3</Version>
     <Authors>MapManagement</Authors>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
