@@ -1,0 +1,118 @@
+<Page
+    x:Class="MinionUI.CreationPages.General.GeneralPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:local="using:MinionUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="GeneralMainGrid"
+          ColumnSpacing="25">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".5*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />     
+            <RowDefinition Height="2*" />       
+            <RowDefinition Height=".5*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height=".5*" />
+        </Grid.RowDefinitions>
+        
+        <TextBlock x:Name="GeneralTextBlock"
+                   Text="General"
+                   Margin="10"
+                   Grid.Row="0"
+                   Grid.Column="0" />
+        <TextBox x:Name="GeneralNameTextBox"
+                 Header="Guest-Name"
+                 Text="{Binding CreatedGuest.Name, Mode=TwoWay}"
+                 Margin="10"
+                 Grid.Row="1"
+                 Grid.Column="0"  />
+        <TextBox x:Name="GeneralUuidTextBox"
+                 Header="UUID"
+                 Text="{Binding CreatedGuest.Uuid, Mode=TwoWay}"
+                 Margin="10"
+                 Grid.Row="1"
+                 Grid.Column="1"  />
+        <TextBox x:Name="GeneralTemplateTextBox"
+                 Header="Template"
+                 Text="{Binding CreatedGuest.Template, Mode=TwoWay}"
+                 Margin="10"
+                 Grid.Row="2"
+                 Grid.Column="0"  />
+        <TextBox x:Name="GeneralIsoPathTextBox"
+                 Header="ISO-Path"
+                 Text="{Binding CreatedGuest.IsoPath, Mode=TwoWay}"
+                 Margin="10"
+                 Grid.Row="2"
+                 Grid.Column="1" />
+        <TextBox x:Name="GeneralDescriptionTextBox"
+                 Header="Description"
+                 Text="{Binding CreatedGuest.Description, Mode=TwoWay}"
+                 Margin="10"
+                 Height="300"
+                 Grid.Row="3"
+                 Grid.Column="0"
+                 Grid.ColumnSpan="2" />
+
+        <TextBlock x:Name="DetailsTextBlock"
+                   Text="Details"
+                   Margin="10"
+                   Grid.Row="4"
+                   Grid.Column="0" />
+        <ComboBox x:Name="DetailsHypervisorComboBox"
+                 Header="Hypervisor"
+                 ItemsSource="{Binding HypervisorList}"
+                 SelectedValue="{Binding CreatedGuestDetails.Hypervisor, Mode=TwoWay}"
+                 Margin="10"
+                 Grid.Row="5"
+                 Grid.Column="0" />
+        <ComboBox x:Name="DetailsArchitectureComboBox"
+                 Header="Hypervisor"
+                 ItemsSource="{Binding ArchitectureList}"
+                 SelectedValue="{Binding CreatedGuestDetails.Architecture, Mode=TwoWay}"
+                 Margin="10"
+                 Grid.Row="5"
+                 Grid.Column="1" />
+        <ComboBox x:Name="DetailsChipsetTextComboBox"
+                 Header="Chipset"
+                 ItemsSource="{Binding ChipsetList}"
+                 SelectedValue="{Binding CreatedGuestDetails.Chipset, Mode=TwoWay}"
+                 Margin="10"
+                 Grid.Row="6"
+                 Grid.Column="0" />
+        <TextBox x:Name="DetailsEmulatorPathTextBox"
+                 Header="Emulator-Path"
+                 Text="{Binding CreatedGuestDetails.EmulatorPath, Mode=TwoWay}"
+                 Margin="10"
+                 Grid.Row="6"
+                 Grid.Column="1" />
+        <TextBox x:Name="DetailsFirmwarePathTextBox"
+                 Header="Firmware-Path"
+                 Text="{Binding CreatedGuestDetails.FirmwarePath, Mode=TwoWay}"
+                 Margin="10"
+                 Grid.Row="7"
+                 Grid.Column="0" />
+
+        <StackPanel x:Name="BottomButtonStackPanel"
+                    Orientation="Horizontal"
+                    Grid.Column="0"
+                    Grid.Row="8"
+                    Grid.ColumnSpan="2">
+            <Button x:Name="ResetButton"
+                    Content="Reset to default" />
+        </StackPanel>
+    </Grid>
+
+</Page>

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using MinionUI.CreationPages.CpuMemory;
+using MinionUI.CreationPages.General;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +26,7 @@ namespace MinionUI.CreationPages.CreateTemplate
         private readonly List<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)>
         {
             ("cpu-memory", typeof(CpuMemoryPage)),
+            ("general", typeof(GeneralPage))
         };
 
         #endregion
