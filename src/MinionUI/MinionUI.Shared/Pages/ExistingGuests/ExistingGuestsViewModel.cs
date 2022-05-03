@@ -12,22 +12,33 @@ namespace MinionUI.ExistingGuests
         {
             Guests = new List<IGuest>()
             {
-                new Guest("Test", "ABCDEF12345")
-                {
-                    Template = "My Template",
-                    LastUsedAt = System.DateTime.Today
-                },
-                new Guest("Arch", "MyCoolArchId")
-                {
-                    Template = "Arch Template",
-                    LastUsedAt = System.DateTime.Now
-                },
-                new Guest("Win 11", "MyWinElevenId")
-                {
-                    Template = "Win11",
-                    LastUsedAt = System.DateTime.Today
-                },
-
+                new Guest
+                (
+                    "Some Guest",
+                    "MySuperCoolUUID",
+                    "/some/Path",
+                    new GuestDetails(),
+                    new Cpu(),
+                    new Memory()
+                ),
+                new Guest
+                (
+                    "Arch",
+                    "ArchUUID",
+                    "/some/path/to/Arch/iso",
+                    new GuestDetails(),
+                    new Cpu(),
+                    new Memory()
+                ),
+                new Guest
+                (
+                    "Win",
+                    "WindowsUUID",
+                    "/windows/path",
+                    new GuestDetails(),
+                    new Cpu(),
+                    new Memory()
+                )
             };
         }
 
