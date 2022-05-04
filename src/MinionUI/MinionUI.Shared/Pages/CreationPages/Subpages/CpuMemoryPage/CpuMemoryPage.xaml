@@ -26,11 +26,15 @@
                     Grid.Row="0">
             <TextBlock x:Name="CpuTextBlock"
                        Text="CPU"
+                       FontSize="20"
+                       FontWeight="Bold"
                        Margin="10" />
-            <TextBox x:Name="CpuConfigurationTextBox"
-                    Header="Configuration"
-                    Text="{Binding CreatedCpu.Configuration, Mode=TwoWay}"
-                    Margin="10" />
+            <ComboBox x:Name="CpuConfigurationTextBox"
+                      Header="Configuration"
+                      ItemsSource="{Binding CpuConfigurationList}"
+                      SelectedValue="{Binding CreatedCpu.Configuration, Mode=TwoWay}"
+                      Margin="10"
+                      HorizontalAlignment="Stretch" />
             <TextBox x:Name="CpuCoresTextBox"
                      Header="Cores"
                      Text="{Binding CreatedCpu.Cores, Mode=TwoWay}"
@@ -48,6 +52,8 @@
                     Grid.Row="0">
             <TextBlock x:Name="MemoryTextBlock"
                        Text="Memory"
+                       FontSize="20"
+                       FontWeight="Bold"
                        Margin="10" />
             <TextBox x:Name="MemoryAllocationTextBox"
                      Header="Allocation in MB"

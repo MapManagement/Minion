@@ -1,4 +1,8 @@
+
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using MinionProcesses.Components;
 using MinionProcesses.Components.Enums;
@@ -48,6 +52,12 @@ namespace MinionUI.CreationPages.CpuMemory
                 OnPropertyChanged();
             }
         }
+
+        public List<CpuConfiguration> CpuConfigurationList
+        {
+            get { return Enum.GetValues(typeof(CpuConfiguration)).Cast<CpuConfiguration>().ToList(); }
+        }
+        
         
         #endregion
 
