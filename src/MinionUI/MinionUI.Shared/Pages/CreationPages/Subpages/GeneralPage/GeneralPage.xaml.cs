@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using MinionProcesses.Components.Interfaces;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -23,13 +24,13 @@ namespace MinionUI.CreationPages.General
 
         #endregion
 
-        public GeneralPage()
+        public GeneralPage(IGuest guestObject)
         {
             this.InitializeComponent();
 
             SubscribeToButtonEvents();
 
-            _viewModel = new GeneralViewModel();
+            _viewModel = new GeneralViewModel(guestObject);
             DataContext = _viewModel;
         }
 

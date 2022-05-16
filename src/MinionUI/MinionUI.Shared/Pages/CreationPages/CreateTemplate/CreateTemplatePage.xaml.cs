@@ -64,7 +64,7 @@ namespace MinionUI.CreationPages.CreateTemplate
 
             if (!(_page is null) && !Type.Equals(preNavPageType, _page))
             {
-                ContentFrame.Navigate(_page, null, transitionInfo);
+                ContentFrame.Navigate(_page, _mainVm.NewGuestObject, transitionInfo);
             }
         }
 

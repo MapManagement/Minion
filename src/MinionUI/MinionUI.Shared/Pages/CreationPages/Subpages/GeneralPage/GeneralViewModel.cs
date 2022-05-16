@@ -20,7 +20,7 @@ namespace MinionUI.CreationPages.General
 
         #region Constructor
 
-        public GeneralViewModel()
+        public GeneralViewModel(IGuest guestObject)
         {
             //TODO: save any changes that already have been made and load them
             SetDefaultSpecifications();
@@ -38,17 +38,6 @@ namespace MinionUI.CreationPages.General
             set
             { 
                 _createdGuest = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private IGuestDetails _createdGuestDetails;
-        public IGuestDetails CreatedGuestDetails
-        {
-            get { return _createdGuestDetails; }
-            set
-            {
-                _createdGuestDetails = value;
                 OnPropertyChanged();
             }
         }
@@ -82,7 +71,27 @@ namespace MinionUI.CreationPages.General
 
         private void SetDefaultSpecifications()
         {
-            
+            var newGuestDetails = new GuestDetails
+            {
+                Hypervisor = GuestHypervisor.Kvm,
+                Architecture = GuestArchitecture.x86_64,
+                Chipset = GuestChipset.Q35,
+                Accelerator = GuestAccelerator.Kvm,
+                EmulatorPath = "/my/emulator/path", //TODO: check typical emulator paths
+                FirmwarePath = "/my/firmware/path" //TODO: check typical emulator paths
+            };
+
+            var newGuest = new Guest 
+            (
+                name: "NewGuest",
+                uuid: "GenerateNewUuid", //TODO: get UUID
+                isoPath: "",
+                guestDetails: newGuestDetails,
+                cpu: new Cpu(),
+                memory: new Memory()
+            );
+
+            CreatedGuest = newGuest;
         }
 
         #endregion

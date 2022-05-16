@@ -34,7 +34,7 @@
                             FontWeight="Bold"
                             Margin="10"/>
                     <TextBox x:Name="GeneralNameTextBox"
-                            Header="Guest-Name"
+                            Header="Template/Guest-Name"
                             Text="{Binding CreatedGuest.Name, Mode=TwoWay}"
                             Margin="10" />
                     <TextBox x:Name="GeneralTemplateTextBox"
@@ -70,28 +70,28 @@
                     <ComboBox x:Name="DetailsArchitectureComboBox"
                              Header="Hypervisor"
                              ItemsSource="{Binding ArchitectureList}"
-                             SelectedValue="{Binding CreatedGuestDetails.Architecture, Mode=TwoWay}"
+                             SelectedValue="{Binding CreatedGuest.GuestDetails.Architecture, Mode=TwoWay}"
                              HorizontalAlignment="Stretch"
                              Margin="10" />
                     <ComboBox x:Name="DetailsHypervisorComboBox"
                               Header="Hypervisor"
                               ItemsSource="{Binding HypervisorList}"
-                              SelectedValue="{Binding CreatedGuestDetails.Hypervisor, Mode=TwoWay}"
+                              SelectedValue="{Binding CreatedGuest.GuestDetails.Hypervisor, Mode=TwoWay}"
                               HorizontalAlignment="Stretch"
                               Margin="10"/>
                     <ComboBox x:Name="DetailsChipsetTextComboBox"
                               Header="Chipset"
                               ItemsSource="{Binding ChipsetList}"
-                              SelectedValue="{Binding CreatedGuestDetails.Chipset, Mode=TwoWay}"
+                              SelectedValue="{Binding CreatedGuest.GuestDetails.Chipset, Mode=TwoWay}"
                               HorizontalAlignment="Stretch"
                               Margin="10" />
                     <TextBox x:Name="DetailsEmulatorPathTextBox"
                              Header="Emulator-Path"
-                             Text="{Binding CreatedGuestDetails.EmulatorPath, Mode=TwoWay}"
+                             Text="{Binding CreatedGuest.GuestDetails.EmulatorPath, Mode=TwoWay}"
                              Margin="10" />
                     <TextBox x:Name="DetailsFirmwarePathTextBox"
                              Header="Firmware-Path"
-                             Text="{Binding CreatedGuestDetails.FirmwarePath, Mode=TwoWay}"
+                             Text="{Binding CreatedGuest.GuestDetails.FirmwarePath, Mode=TwoWay}"
                              Margin="10" />
                 </StackPanel>
                 
