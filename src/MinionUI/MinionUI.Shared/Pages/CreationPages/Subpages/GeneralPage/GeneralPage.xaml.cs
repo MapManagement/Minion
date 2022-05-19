@@ -24,13 +24,13 @@ namespace MinionUI.CreationPages.General
 
         #endregion
 
-        public GeneralPage(IGuest guestObject)
+        public GeneralPage()
         {
             this.InitializeComponent();
 
             SubscribeToButtonEvents();
 
-            _viewModel = new GeneralViewModel(guestObject);
+            _viewModel = new GeneralViewModel();
             DataContext = _viewModel;
         }
 

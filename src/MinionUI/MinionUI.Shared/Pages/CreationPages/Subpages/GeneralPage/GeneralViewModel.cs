@@ -20,7 +20,7 @@ namespace MinionUI.CreationPages.General
 
         #region Constructor
 
-        public GeneralViewModel(IGuest guestObject)
+        public GeneralViewModel()
         {
             //TODO: save any changes that already have been made and load them
             SetDefaultSpecifications();
