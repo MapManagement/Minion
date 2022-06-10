@@ -1,0 +1,76 @@
+<Page
+    x:Class="MinionUI.CreationPages.Storage.StoragePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:local="using:MinionUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    
+    <Grid x:Name="Main">
+        <ScrollViewer>
+            <Grid x:Name="StorageMainGrid"
+                ColumnSpacing="25">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                
+                <!-- DataGrid does not allow to add new rows as a user -->
+                <controls:DataGrid x:Name="StorageDrivesGrid"
+                       ItemsSource="{x:Bind _viewModel.StorageList}"
+                       AutoGenerateColumns="False"
+                       CanUserReorderColumns="True"
+                       CanUserResizeColumns="True"
+                       GridLinesVisibility="All"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="0">
+                    <controls:DataGrid.Columns>
+                        <controls:DataGridTextColumn Header="Path"
+                                                     Binding="{Binding Path}"
+                                                     Width="SizeToHeader"/>
+                        <!-- TODO: ComboBox not working properly -->
+                        <controls:DataGridComboBoxColumn Header="Type"
+                                                         Binding="{Binding Type}"
+                                                         ItemsSource="{Binding StorageTypeList}"
+                                                         Width="SizeToHeader"/>
+                        <controls:DataGridComboBoxColumn Header="Bus Type"
+                                                         Binding="{Binding BusType}"
+                                                         ItemsSource="{Binding StorageBusTypeList}"
+                                                         Width="SizeToHeader"/>
+                        <controls:DataGridTextColumn Header="Size"
+                                                     Binding="{Binding Size}"
+                                                     Width="SizeToHeader"/>
+                        <controls:DataGridCheckBoxColumn Header="Readonly"
+                                                          Binding="{Binding IsReadonly}"
+                                                          Width="SizeToHeader"/>
+                        <controls:DataGridCheckBoxColumn Header="Shareable"
+                                                          Binding="{Binding IsShareable}"
+                                                          Width="SizeToHeader"/>
+                        <controls:DataGridTextColumn Header="Boot Order"
+                                                     Binding="{Binding BootOrder}"
+                                                     Width="SizeToHeader"/>
+                    </controls:DataGrid.Columns>
+                </controls:DataGrid>
+
+                <StackPanel x:Name="BottomButtonStackPanel"
+                            Orientation="Horizontal"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Grid.Row="1">
+                    <Button x:Name="ResetButton"
+                            Content="Reset to default" />
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+
+</Page>

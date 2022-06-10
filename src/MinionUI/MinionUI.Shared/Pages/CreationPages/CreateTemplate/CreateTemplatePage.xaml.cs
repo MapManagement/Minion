@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using MinionUI.CreationPages.CpuMemory;
 using MinionUI.CreationPages.General;
+using MinionUI.CreationPages.Storage;
 using Newtonsoft.Json;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -26,13 +27,15 @@ namespace MinionUI.CreationPages.CreateTemplate
         const string SettingNavItemTag = "settings";
         const string CpuMemoryNavItemTag = "cpu-memory";
         const string GeneralNavItemTag = "general";
+        const string StorageNavItemTag = "storage";
 
         private CreateTemplateViewModel _mainVm;
 
         private readonly List<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)>
         {
             (CpuMemoryNavItemTag, typeof(CpuMemoryPage)),
-            (GeneralNavItemTag, typeof(GeneralPage))
+            (GeneralNavItemTag, typeof(GeneralPage)),
+            (StorageNavItemTag, typeof(StoragePage))
         };
 
         #endregion
