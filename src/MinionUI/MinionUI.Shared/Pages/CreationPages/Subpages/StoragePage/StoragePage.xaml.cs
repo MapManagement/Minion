@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using MinionProcesses.Components.Interfaces;
+using MinionUI.CreationPages.Storage.Dialog;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -39,6 +40,7 @@ namespace MinionUI.CreationPages.Storage
         private void SubscribeToButtonEvents()
         {
             ResetButton.Click += ResetButtonOnClick;
+            AddStorageButton.Click += AddStorageButtonClick;
         }
 
         #endregion
@@ -60,6 +62,20 @@ namespace MinionUI.CreationPages.Storage
             {
                 _viewModel.ResetSpecifications();
             }
+        }
+
+        private async void AddStorageButtonClick(object sender, RoutedEventArgs e)
+        {
+            var dialog = NewStorageContentDialog();
+
+            await dialog.ShowAsync();
+        }
+
+        private NewStorageDialog NewStorageContentDialog()
+        {
+            NewStorageDialog newStorageDialog = new NewStorageDialog();
+
+            return newStorageDialog;
         }
 
         #endregion

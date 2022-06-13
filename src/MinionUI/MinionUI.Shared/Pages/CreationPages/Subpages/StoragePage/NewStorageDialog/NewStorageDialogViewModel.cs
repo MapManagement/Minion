@@ -8,9 +8,9 @@ using MinionProcesses.Components;
 using MinionProcesses.Components.Enums;
 using MinionProcesses.Components.Interfaces;
 
-namespace MinionUI.CreationPages.Storage
+namespace MinionUI.CreationPages.Storage.Dialog
 {
-    public class StorageViewModel : INotifyPropertyChanged
+    public class NewStorageDialogViewModel : INotifyPropertyChanged
     {
         #region Fields
 
@@ -20,24 +20,23 @@ namespace MinionUI.CreationPages.Storage
 
         #region Constructor
 
-        public StorageViewModel()
+        public NewStorageDialogViewModel()
         {
-            //TODO: save any changes that already have been made and load them
-            SetDefaultSpecifications();
+
         }
 
         #endregion
 
         #region Properties
 
-        private List<IStorage> _storageList;
-        public List<IStorage> StorageList
+        private IStorage _newStorage;
+        public IStorage NewStorage
         {
 
-            get { return _storageList; }
+            get { return _newStorage; }
             set
             { 
-                _storageList = value;
+                _newStorage = value;
                 OnPropertyChanged();
             }
         }
@@ -58,15 +57,6 @@ namespace MinionUI.CreationPages.Storage
 
         #region Public Methods
 
-        public void InsertNewStorage(IStorage newStorage)
-        {
-            StorageList.Add(newStorage);
-        }
-
-        public void ResetSpecifications()
-        {
-            SetDefaultSpecifications();
-        }
 
         #endregion
 
@@ -75,18 +65,6 @@ namespace MinionUI.CreationPages.Storage
         private void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        private void SetDefaultSpecifications()
-        {
-            var storageList = new List<IStorage>();
-
-            var drive = new MinionProcesses.Components.Storage("/this/is/my/path", StorageType.Disk, StorageBusType.Sata, false, true, 1);
-
-            storageList.Add(drive);
-
-            StorageList = storageList;
-
         }
 
         #endregion

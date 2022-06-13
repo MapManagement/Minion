@@ -9,7 +9,6 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    
     <Grid x:Name="Main">
         <ScrollViewer>
             <Grid x:Name="StorageMainGrid"
@@ -67,7 +66,11 @@
                             Grid.ColumnSpan="2"
                             Grid.Row="1">
                     <Button x:Name="ResetButton"
-                            Content="Reset to default" />
+                            Content="Reset to default"
+                            Margin="10" />
+                    <Button x:Name="AddStorageButton"
+                            Content="Add new storage device"
+                            Margin="10" />
                 </StackPanel>
             </Grid>
         </ScrollViewer>
