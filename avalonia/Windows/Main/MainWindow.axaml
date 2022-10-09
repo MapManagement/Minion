@@ -1,0 +1,42 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Minion.Windows.Main.MainWindow"
+        Title="Minion">
+    <Grid x:Name="MainGrid"
+          Margin="25, 25, 25, 25">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="MachinesButtons"
+                Grid.Row="0"
+                Grid.Column="0">
+                Show Machines
+        </Button>
+        <Button x:Name="NewMachineButton"
+                Grid.Row="0"
+                Grid.Column="1">
+                Create New Machine
+        </Button>
+        <Button x:Name="TemplatesButton"
+                Grid.Row="1"
+                Grid.Column="0">
+                Show Templates
+        </Button>
+        <Button x:Name="PreferencesButton"
+                Grid.Row="1"
+                Grid.Column="1">
+                Open Preferences
+        </Button>
+
+    </Grid>
+
+</Window>
