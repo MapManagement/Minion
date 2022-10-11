@@ -16,27 +16,50 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Button x:Name="MachinesButtons"
+        <Button x:Name="MachinesButton"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Content="Show Machines"
+                FontSize="25"
+                Margin="25, 25, 25, 25"
+                Click="OnClickMachinesButton"
                 Grid.Row="0"
-                Grid.Column="0">
-                Show Machines
-        </Button>
+                Grid.Column="0" />
         <Button x:Name="NewMachineButton"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                VerticalAlignment="Stretch"
+                FontSize="25"
+                Content="Create New Machine"
+                Margin="25, 25, 25, 25"
+                Click="OnClickNewMachineButton"
                 Grid.Row="0"
-                Grid.Column="1">
-                Create New Machine
-        </Button>
+                Grid.Column="1" />
         <Button x:Name="TemplatesButton"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                FontSize="25"
+                Content="Show Templates"
+                Margin="25, 25, 25, 25"
+                Click="OnClickTemplatesButton"
                 Grid.Row="1"
-                Grid.Column="0">
-                Show Templates
-        </Button>
+                Grid.Column="0" />
         <Button x:Name="PreferencesButton"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                FontSize="25"
+                Content="Open Preferences"
+                Margin="25, 25, 25, 25"
+                Click="OnClickPreferencesButton"
                 Grid.Row="1"
-                Grid.Column="1">
-                Open Preferences
-        </Button>
-
+                Grid.Column="1" />
     </Grid>
 
 </Window>

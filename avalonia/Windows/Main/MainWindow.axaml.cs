@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 
 namespace Minion.Windows.Main
 {
@@ -10,5 +11,29 @@ namespace Minion.Windows.Main
 
             DataContext = new MainWindowViewModel();
         }
+
+        #region Events
+
+        public void OnClickMachinesButton(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        public void OnClickNewMachineButton(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        public void OnClickTemplatesButton(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        public void OnClickPreferencesButton(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        #endregion
     }
 }
