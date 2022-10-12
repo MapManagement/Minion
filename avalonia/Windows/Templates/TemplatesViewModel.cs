@@ -1,8 +1,8 @@
 using System.ComponentModel;
 
-namespace Minion.Windows.Main
+namespace Minion.Windows.Templates
 {
-    public class MainWindowViewModel : INotifyPropertyChanged
+    public class TemplatesViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
     }
