@@ -9,6 +9,8 @@ namespace Minion.Windows.Machines
         public MachinesWindow()
         {
             InitializeComponent();
+
+            DataContext = new MachinesViewModel();
         }
     }
 }

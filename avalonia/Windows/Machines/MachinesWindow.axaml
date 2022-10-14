@@ -5,7 +5,9 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Minion.Windows.Machines.MachinesWindow">
     <Grid>
-        <DataGrid x:Name="MachinesDataGrid">
+        <DataGrid x:Name="MachinesDataGrid"
+                  Items="{Binding GuestList}"
+                  AutoGenerateColumns="True" >
         </DataGrid>
     </Grid>
 </Window>
