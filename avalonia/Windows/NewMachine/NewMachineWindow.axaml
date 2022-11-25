@@ -15,170 +15,217 @@
 			<RowDefinition Height="*" />
 			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
-
-
-		<StackPanel x:Name="GeneralStackPanel"
-					Orientation="Vertical"
-					Grid.Column="0"
-					Grid.Row="0"
-					Margin="20, 20, 20, 20">
-			<TextBlock Text="Name" />
-			<TextBox x:Name="NameTextBox" />
-
-			<TextBlock Text="UUID" />
-			<TextBox x:Name="UuidTextBox"
-					 IsEnabled="False" />
-
-			<TextBlock Text="Description" />
-			<TextBox x:Name="DescriptionTextBox" />
-
-			<TextBlock Text="ISO-Path" />
-			<TextBox x:Name="IsoPathTextBox" />
-
-			<TextBlock Text="Used Template" />
-			<TextBox x:Name="TemplateTextBox" />
-
-			<TextBlock Text="Created At" />
-			<TextBox x:Name="CreatedAtTextBox"
-					 IsEnabled="False" />
-
-			<TextBlock Text="Last Used At" />
-			<TextBox x:Name="LastUsedAtTextBox"
-					 IsEnabled="False" />
-
-		</StackPanel>
 		
-		<StackPanel x:Name="CpuStackPanel"
-					Orientation="Vertical"
-					Grid.Column="1"
-					Grid.Row="0"
-					Margin="20, 20, 20, 20">
+		<ScrollViewer Grid.Column="0"
+					  Grid.Row="0">
+			<StackPanel x:Name="GeneralStackPanel"
+						Orientation="Vertical"
+						Spacing="5"
+						Margin="20, 20, 20, 20">
+				<TextBlock Text="General Configuration"
+						   FontWeight="Bold"
+						   FontSize="20"/>
 
-			<TextBlock Text="Configuration" />
-			<TextBox x:Name="ConfigurationTextBox"/>
+				<TextBlock Text="Name" />
+				<TextBox x:Name="NameTextBox" />
 
-			<TextBlock Text="Copy Host Configuration" />
-			<CheckBox x:Name="CopyHostConfigurationCheckBox"/>
+				<TextBlock Text="UUID" />
+				<TextBox x:Name="UuidTextBox"
+						 IsEnabled="False" />
 
-			<TextBlock Text="Security Flaw Migrations" />
-			<CheckBox x:Name="SecurityFlawMigrationsCheckBox"/>
+				<TextBlock Text="Description" />
+				<TextBox x:Name="DescriptionTextBox" />
 
-			<TextBlock Text="Sockets" />
-			<TextBox x:Name="SocketsTextBox"/>
+				<TextBlock Text="ISO-Path" />
+				<TextBox x:Name="IsoPathTextBox" />
 
-			<TextBlock Text="Cores" />
-			<TextBox x:Name="CoresTextBox"/>
+				<TextBlock Text="Used Template" />
+				<TextBox x:Name="TemplateTextBox" />
 
-			<TextBlock Text="Threads" />
-			<TextBox x:Name="ThreadsTextBox"/>
+				<TextBlock Text="Created At" />
+				<TextBox x:Name="CreatedAtTextBox"
+						 IsEnabled="False" />
 
-		</StackPanel>
+				<TextBlock Text="Last Used At" />
+				<TextBox x:Name="LastUsedAtTextBox"
+						 IsEnabled="False" />
 
-		<StackPanel x:Name="MemoryStackPanel"
-					Orientation="Vertical"
-					Grid.Column="0"
-					Grid.Row="1"
-					Margin="20, 20, 20, 20">
+			</StackPanel>
+		</ScrollViewer>
 
-			<TextBlock Text="Allocation" />
-			<TextBox x:Name="AllocationTextBox"/>
+		<ScrollViewer Grid.Column="1"
+					  Grid.Row="0">
+			<StackPanel x:Name="CpuStackPanel"
+						Orientation="Vertical"
+						Spacing="5"
+						Margin="20, 20, 20, 20">
 
-			<TextBlock Text="Maximum Allocation" />
-			<TextBox x:Name="MaxAllocationTextBox"/>
+				<TextBlock Text="CPU Configuration"
+						   FontWeight="Bold"
+						   FontSize="20"/>
 
-		</StackPanel>
+				<TextBlock Text="Configuration" />
+				<TextBox x:Name="ConfigurationTextBox"/>
 
-		<StackPanel x:Name="NetworkStackPanel"
-					Orientation="Vertical"
-					Grid.Column="1"
-					Grid.Row="1"
-					Margin="20, 20, 20, 20">
+				<TextBlock Text="Copy Host Configuration" />
+				<CheckBox x:Name="CopyHostConfigurationCheckBox"/>
 
-			<TextBlock Text="Interface Type" />
-			<TextBox x:Name="InterfaceTypeTextBox"/>
+				<TextBlock Text="Security Flaw Migrations" />
+				<CheckBox x:Name="SecurityFlawMigrationsCheckBox"/>
 
-			<TextBlock Text="Interface Name" />
-			<TextBox x:Name="InterfaceNameTextBox"/>
+				<TextBlock Text="Sockets" />
+				<TextBox x:Name="SocketsTextBox"/>
 
-			<TextBlock Text="Source Name" />
-			<TextBox x:Name="SourceNameTextBox"/>
+				<TextBlock Text="Cores" />
+				<TextBox x:Name="CoresTextBox"/>
 
-			<TextBlock Text="MAC Address" />
-			<TextBox x:Name="MacAddressTextBox"/>
+				<TextBlock Text="Threads" />
+				<TextBox x:Name="ThreadsTextBox"/>
 
-			<TextBlock Text="Device Model" />
-			<TextBox x:Name="DeviceModelTextBox"/>
+			</StackPanel>
+		</ScrollViewer>
+	
+		<ScrollViewer Grid.Column="0"
+					  Grid.Row="1">
+			<StackPanel x:Name="MemoryStackPanel"
+						Orientation="Vertical"
+						Spacing="5"
+						Margin="20, 20, 20, 20">
 
-		</StackPanel>
+				<TextBlock Text="Memory Configuration"
+						   FontWeight="Bold"
+						   FontSize="20"/>
 
-		<StackPanel x:Name="SoundStackPanel"
-					Orientation="Vertical"
-					Grid.Column="0"
-					Grid.Row="2"
-					Margin="20, 20, 20, 20">
+				<TextBlock Text="Allocation" />
+				<TextBox x:Name="AllocationTextBox"/>
 
-			<TextBlock Text="WORK IN PROGRESS" />
-			<TextBox x:Name="SoundTextBox"/>
+				<TextBlock Text="Maximum Allocation" />
+				<TextBox x:Name="MaxAllocationTextBox"/>
 
-		</StackPanel>
+			</StackPanel>
+		</ScrollViewer>
+	
+		<ScrollViewer Grid.Column="1"
+					  Grid.Row="1">
+			<StackPanel x:Name="NetworkStackPanel"
+						Orientation="Vertical"
+						Spacing="5"
+						Margin="20, 20, 20, 20">
 
-		<StackPanel x:Name="StorageStackPanel"
-					Orientation="Vertical"
-					Grid.Column="1"
-					Grid.Row="2"
-					Margin="20, 20, 20, 20">
+				<TextBlock Text="Network Configuration"
+						   FontWeight="Bold"
+						   FontSize="20"/>	
 
-			<DataGrid x:Name="StorageDataGrid"
-					  AutoGenerateColumns="False">
-				<DataGrid.Columns>
-					<DataGridTextColumn Header="Path"
-										Binding="{Binding Path}" />
-					<DataGridTextColumn Header="Type"
-										Binding="{Binding Type}" />	
-					<DataGridTextColumn Header="Size"
-										Binding="{Binding Size}" />
-				</DataGrid.Columns>
-			</DataGrid>
+				<TextBlock Text="Interface Type" />
+				<TextBox x:Name="InterfaceTypeTextBox"/>
 
-		</StackPanel>
-		
-		<StackPanel x:Name="PciStackPanel"
-					Orientation="Vertical"
-					Grid.Column="0"
-					Grid.Row="3"
-					Margin="20, 20, 20, 20">
+				<TextBlock Text="Interface Name" />
+				<TextBox x:Name="InterfaceNameTextBox"/>
 
-			<DataGrid x:Name="PciDataGrid"
-					  AutoGenerateColumns="False">
-				<DataGrid.Columns>
-					<DataGridTextColumn Header="Domain"
-										Binding="{Binding Domain}" />
-					<DataGridTextColumn Header="Bus"
-										Binding="{Binding Bus}" />	
-					<DataGridTextColumn Header="Slot"
-										Binding="{Binding Slot}" />
-				</DataGrid.Columns>
-			</DataGrid>
+				<TextBlock Text="Source Name" />
+				<TextBox x:Name="SourceNameTextBox"/>
 
-		</StackPanel>
+				<TextBlock Text="MAC Address" />
+				<TextBox x:Name="MacAddressTextBox"/>
 
-		<StackPanel x:Name="UsbStackPanel"
-					Orientation="Vertical"
-					Grid.Column="1"
-					Grid.Row="3"
-					Margin="20, 20, 20, 20">
+				<TextBlock Text="Device Model" />
+				<TextBox x:Name="DeviceModelTextBox"/>
 
-			<DataGrid x:Name="UsbDataGrid"
-					  AutoGenerateColumns="False">
-				<DataGrid.Columns>
-					<DataGridTextColumn Header="Vendor ID"
-										Binding="{Binding VendorId}" />
-					<DataGridTextColumn Header="Product ID"
-										Binding="{Binding ProductId}" />	
-				</DataGrid.Columns>
-			</DataGrid>
+			</StackPanel>
+		</ScrollViewer>
 
-		</StackPanel>
+		<ScrollViewer Grid.Column="0"
+					  Grid.Row="2">
+			<StackPanel x:Name="SoundStackPanel"
+						Orientation="Vertical"
+						Spacing="5"
+						Margin="20, 20, 20, 20">
+
+				<TextBlock Text="Sound Configuration"
+						   FontWeight="Bold"
+						   FontSize="20"/>
+
+				<TextBlock Text="WORK IN PROGRESS" />
+				<TextBox x:Name="SoundTextBox"/>
+
+			</StackPanel>
+		</ScrollViewer>
+
+		<ScrollViewer Grid.Column="1"
+					  Grid.Row="2">
+			<StackPanel x:Name="StorageStackPanel"
+						Orientation="Vertical"
+						Spacing="5"
+						Margin="20, 20, 20, 20">
+
+				<TextBlock Text="Storage Configuration"
+						   FontWeight="Bold"
+						   FontSize="20"/>
+
+				<DataGrid x:Name="StorageDataGrid"
+						  AutoGenerateColumns="False">
+					<DataGrid.Columns>
+						<DataGridTextColumn Header="Path"
+											Binding="{Binding Path}" />
+						<DataGridTextColumn Header="Type"
+											Binding="{Binding Type}" />	
+						<DataGridTextColumn Header="Size"
+											Binding="{Binding Size}" />
+					</DataGrid.Columns>
+				</DataGrid>
+
+			</StackPanel>
+		</ScrollViewer>
+	
+		<ScrollViewer Grid.Column="0"
+					  Grid.Row="3">
+			<StackPanel x:Name="PciStackPanel"
+						Orientation="Vertical"
+						Spacing="5"
+						Margin="20, 20, 20, 20">
+
+				<TextBlock Text="PCI Device Configuration"
+						   FontWeight="Bold"
+						   FontSize="20"/>
+
+				<DataGrid x:Name="PciDataGrid"
+						  AutoGenerateColumns="False">
+					<DataGrid.Columns>
+						<DataGridTextColumn Header="Domain"
+											Binding="{Binding Domain}" />
+						<DataGridTextColumn Header="Bus"
+											Binding="{Binding Bus}" />	
+						<DataGridTextColumn Header="Slot"
+											Binding="{Binding Slot}" />
+					</DataGrid.Columns>
+				</DataGrid>
+
+			</StackPanel>
+		</ScrollViewer>
+
+		<ScrollViewer Grid.Column="1"
+					  Grid.Row="3">
+			<StackPanel x:Name="UsbStackPanel"
+						Orientation="Vertical"
+						Spacing="5"
+						Margin="20, 20, 20, 20">
+
+				<TextBlock Text="USB Device Configuration"
+						   FontWeight="Bold"
+						   FontSize="20"/>
+
+				<DataGrid x:Name="UsbDataGrid"
+						  AutoGenerateColumns="False">
+					<DataGrid.Columns>
+						<DataGridTextColumn Header="Vendor ID"
+											Binding="{Binding VendorId}" />
+						<DataGridTextColumn Header="Product ID"
+											Binding="{Binding ProductId}" />	
+					</DataGrid.Columns>
+				</DataGrid>
+
+			</StackPanel>
+		</ScrollViewer>
 	</Grid>
 
 </Window>
